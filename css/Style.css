@@ -1,0 +1,54 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+  
+.indexflex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20rem;
+  margin-top: 1px;
+  margin-bottom: 20px;
+}
+
+.contenedorflexmain {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px;
+}
+
+.contenedorflexmainarticle {
+  width: 100%;
+  text-align: center;
+}
+
+.Tazaimagen-Index {
+  width: 100%;
+  height: 300px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* TABLET */
+@media (min-width: 600px) {
+  .contenedorflexmain {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .contenedorflexmainarticle {
+    width: 45%;
+  }
+}
+/* DESKTOP */
+@media (min-width: 992px) {
+  .contenedorflexmainarticle {
+    width: 30%;
+  }
+}
+
+/*# sourceMappingURL=Style.css..map */
