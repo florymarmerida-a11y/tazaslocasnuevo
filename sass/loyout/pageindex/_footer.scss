@@ -1,11 +1,29 @@
-.footer-social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px; 
+.imagenfooter {
+    width: 10px;
+    height: 10px;
+    object-fit: contain;
 }
 
-.imagenfooter{
-    width: 32px;
-    height: 28px;
+/* Tablet */
+@media (min-width: 600px) {
+    .imagenfooter {
+        width: 32px;
+        height: 32px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .imagenfooter {
+        width: 36px;
+        height: 36px;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
 }
