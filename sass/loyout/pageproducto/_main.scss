@@ -1,0 +1,39 @@
+.button {
+    background-color: rgb(82, 10, 82);
+    color: aliceblue;
+    width: 10rem;
+    height: 2rem;
+    border: none;
+    padding: 1rem 4rem;
+    border-radius: 0.3rem;
+}
+
+.contenedorflexmain {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 15px;
+    justify-items: center;
+} 
+
+.button {
+  background-color: rgb(82, 10, 82);
+  color: aliceblue;
+  width: 16rem;
+  height: 3rem;
+  border: none;
+  padding: 1rem 4rem;
+  border-radius: 0.3rem;
+} 
+
+@media (min-width: 600px) {
+  .contenedorflexmain {
+    grid-template-columns: repeat(2, 1fr);
+     flex-direction: row;
+  }
+}
+@media (min-width: 992px) {
+  .contenedorflexmain {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} 

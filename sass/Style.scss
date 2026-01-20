@@ -1,5 +1,6 @@
-@use "./loyout/pageindex/headerindex";
+@import "./loyout/pageindex/headerindex";
 @import "./loyout/pageindex/mainindex";
-@import "./loyout/pageindex/footer";
 @import "./loyout/pageproducto/main";
 @import "./loyout/pageproducto/secction";
+@import "./loyout/pageindex/footer";
+@import "./loyout/pageproducto/footer"

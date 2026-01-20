@@ -1,42 +1,49 @@
-.contenedorflexmain {
-    display: flex;
-    flex-direction: column; 
-    gap: 20px;
-    padding: 15px;
-}
-
 .contenedorflexmainarticle {
-    width: 600px;
+    width: 100%;
+    max-width: 400px;
     text-align: center;
-
 }
 
-
+.button {
+    background-color: rgb(82, 10, 82);
+    color: aliceblue;
+    width: 16rem;
+    height: 3rem;
+    border: none;
+    padding: 1rem 3rem;
+    border-radius: 0.3rem;
+}
 .Tazaimagen-Index {
     width: 100%;
-    height: 250px;
     max-width: 250px;
+    height: auto;
     margin: 0 auto;
+    display: block;
+}
+.contenedorflexmain {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 15px;
+    justify-items: center;
+}
+.productoparrafo{
+    font-size: 16px;
+    width: max-content;
 }
 
-/* TABLET */
 @media (min-width: 600px) {
     .contenedorflexmain {
-        display: grid;
-        grid-template-columns: 100px 100px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .contenedorflexmainarticle {
-        width: 45%;
-        border: 1px solid rgb(41, 35, 88);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* DESKTOP */
 @media (min-width: 992px) {
-    .contenedorflexmainarticle {
-        width: 30%;
+    .contenedorflexmain {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
+
+body {
+  background-color: red;
+} 

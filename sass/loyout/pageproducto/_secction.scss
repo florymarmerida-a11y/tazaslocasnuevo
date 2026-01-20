@@ -1,51 +1,43 @@
-.contenedorflexmain {
-    display: flex;
-    flex-direction: column; 
-    gap: 20px;
+.contenedorflexsection{
+   display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
     padding: 15px;
+    justify-items: center;
 }
 
-.contenedorflexmainarticle {
-    width: 600px;
+.contenedorflearticle{
+      width: 100%;
+    max-width: 400px;
     text-align: center;
-
 }
 
-.button{
-       background-color: rgb(82, 10, 82);
-     color: aliceblue;
-     width: 10rem;
-     height: 2rem;
-     border: none;
-     padding: 1rem 4rem;
-     border-radius: 0.3rem;
+.buttonproductos{
+    background-color: rgb(82, 10, 82);
+    color: aliceblue;
+    width: 16rem;
+    height: 3rem;
+    border: none;
+    padding: 1rem 3rem;
+    border-radius: 0.3rem;
+}
+.productoparrafo{
+    font-size: 16px;
+    width: max-content;
 }
 
-.Tazaimagen-Index {
-    width: 100%;
-    height: 250px;
-    max-width: 250px;
-    margin: 0 auto;
+.Index-h3productos{
+    text-align: center;
 }
 
-/* TABLET */
 @media (min-width: 600px) {
     .contenedorflexmain {
-        display: grid;
-        grid-template-columns: 100px 100px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .contenedorflexmainarticle {
-        width: 45%;
-        border: 1px solid rgb(41, 35, 88);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* DESKTOP */
 @media (min-width: 992px) {
-    .contenedorflexmainarticle {
-        width: 30%;
+    .contenedorflexmain {
+        grid-template-columns: repeat(3, 1fr);
     }
-}
+} 
