@@ -1,18 +1,17 @@
-.contenedorflexsection{
-   display: grid;
-    grid-template-columns: 1fr;
+.contenedorflexsection {
+    display: grid;
     gap: 30px;
     padding: 15px;
     justify-items: center;
 }
 
-.contenedorflearticle{
-      width: 100%;
+.contenedorflearticle {
+    width: 100%;
     max-width: 400px;
     text-align: center;
 }
 
-.buttonproductos{
+.buttonproductos {
     background-color: rgb(82, 10, 82);
     color: aliceblue;
     width: 16rem;
@@ -21,23 +20,38 @@
     padding: 1rem 3rem;
     border-radius: 0.3rem;
 }
-.productoparrafo{
+
+.productoparrafo {
     font-size: 16px;
     width: max-content;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
-.Index-h3productos{
+.Index-h3productos {
+    margin: 0 auto;
     text-align: center;
+
+
+}
+
+.Tazaimagen-Index {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 @media (min-width: 600px) {
-    .contenedorflexmain {
+    .contenedorflexsection {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (min-width: 992px) {
-    .contenedorflexmain {
-        grid-template-columns: repeat(3, 1fr);
+
+@media (min-width: 1200px) {
+    .contenedorflexsection {
+        grid-template-columns: repeat(4, 1fr);
     }
-} 
+}
