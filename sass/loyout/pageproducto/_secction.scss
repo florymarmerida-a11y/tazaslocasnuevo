@@ -1,8 +1,10 @@
 .contenedorflexsection {
     display: grid;
-    gap: 30px;
-    padding: 15px;
-    justify-items: center;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid rgb(67, 50, 191)
 }
 
 .contenedorflearticle {
@@ -28,6 +30,7 @@
     text-align: center;
     margin-top: 0;
     margin-bottom: 1rem;
+    width: 100%;
 }
 
 .Index-h3productos {
@@ -39,7 +42,7 @@
 
 .Tazaimagen-Index {
     width: 100%;
-    height: auto;
+    height: 250px;
     border-radius: 10px;
 }
 
@@ -49,9 +52,8 @@
     }
 }
 
-
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
     .contenedorflexsection {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }

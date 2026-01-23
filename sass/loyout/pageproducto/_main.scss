@@ -1,9 +1,10 @@
 .contenedorflexsection {
     display: grid;
-    grid-template-columns: 1fr;
     gap: 25px;
     width: 100%;
+    grid-template-columns: 1fr;
     padding: 20px;
+    border: 1px solid red
 }
 
 .contenedorflearticle {
@@ -29,6 +30,7 @@
     text-align: center;
     margin-top: 0;
     margin-bottom: 1rem;
+    width: 100%;
 }
 
 .Index-h3productos {
