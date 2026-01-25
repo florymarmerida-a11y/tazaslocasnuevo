@@ -1,0 +1,29 @@
+.contenedorflexproductos{
+    display: grid;
+    gap: 25px;
+    width: 100%;
+    grid-template-columns: 1fr;
+    padding: 20px;
+}
+.textoproductos{
+    text-align: center;
+}
+
+.imagennosotros {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+    .contenedorflexproductos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .contenedorflexproductos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
