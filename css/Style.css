@@ -35,7 +35,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
-  padding: 15px;
+  padding: 50px;
   justify-items: center;
 }
 
@@ -117,7 +117,7 @@
   gap: 25px;
   width: 100%;
   padding: 20px;
-  border: 1px solid rgb(67, 50, 191);
+  border: 1px solid rgb(204, 204, 207);
 }
 
 .contenedorflearticle {
@@ -185,10 +185,12 @@
   width: 100%;
   grid-template-columns: 1fr;
   padding: 20px;
+  align-items: center;
 }
 
 .textoproductos {
   text-align: center;
+  font-size: 1rem;
 }
 
 .imagennosotros {
@@ -206,6 +208,7 @@
 @media (min-width: 992px) {
   .contenedorflexproductos {
     grid-template-columns: repeat(2, 1fr);
+    flex-direction: row;
   }
 }
 .temaproductos {

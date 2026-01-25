@@ -4,9 +4,11 @@
     width: 100%;
     grid-template-columns: 1fr;
     padding: 20px;
+    align-items: center;  
 }
 .textoproductos{
     text-align: center;
+        font-size: 1rem;
 }
 
 .imagennosotros {
@@ -25,5 +27,6 @@
 @media (min-width: 992px) {
     .contenedorflexproductos {
         grid-template-columns: repeat(2, 1fr);
+         flex-direction: row;
     }
 }
