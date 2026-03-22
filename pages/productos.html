@@ -9,15 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
     <title> Tazas Locas</title>
-    <meta name="description" content="Descubrí nuestra colección de tazas personalizadas. Diseños creativos, temáticos y originales, ideales para regalos únicos y momentos especiales.">
+    <meta name="description"
+        content="Descubrí nuestra colección de tazas personalizadas. Diseños creativos, temáticos y originales, ideales para regalos únicos y momentos especiales.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/Style.css">
 </head>
 
-
 <body>
-
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -33,10 +32,19 @@
                             <a class="nav-link active" aria-current="page" href="../index.html">INICIO</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/productos.html">PRODUCTOS</a>
+                            <a class="nav-link" href="./productos.html">PRODUCTOS</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../pages/nosotros.html">NOSOTROS</a>
+                        </li>
+                        <li class="nav-item position-relative">
+                            <a class="nav-link" href="../pages/carrito.html">
+                                <img src="../images/4305700.png" alt="Carrito" width="30">
+                                <span id="contadorCarrito"
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    0
+                                </span>
+                            </a>
                         </li>
                     </ul>
                     <form class="d-flex" role="Buscar">
@@ -52,7 +60,7 @@
         </div>
     </header>
 
-<main>
+    <main>
 
         <h2 class="Index-h2"> PRODUCTOS </h2>
 
@@ -60,117 +68,117 @@
             <article class="contenedorflearticle">
                 <img class="Tazaimagen-Index img-fluid" src="../images/tazainfo5.jpg">
                 <h3 class="Index-h3productos">TAZA INFO 5</h3>
-               <p class="productoparrafo">$5000</p>
-                   <button class="buttonproductos"> COMPRAR</button>
+                <p class="productoparrafo">$5000</p>
+                <button class="buttonproductos" id="1"> COMPRAR</button>
             </article>
 
             <article class="contenedorflearticle">
                 <img class="Tazaimagen-Index img-fluid" src="../images/tazamarvel1.jpg">
                 <h3 class="Index-h3productos">TAZA MARVEL 1</h3>
-               <p class="productoparrafo">$5000</p>
-                <button class="buttonproductos"> COMPRAR </button>
+                <p class="productoparrafo">$5000</p>
+                <button class="buttonproductos" id="2"> COMPRAR </button>
             </article>
             <article class="contenedorflearticle">
                 <img class="Tazaimagen-Index img-fluid" src="../images/tazamensaje8.jpg">
                 <h3 class="Index-h3productos">TAZA MENSAJE 8</h3>
-               <p class="productoparrafo">$5000</p>
-                <button class="buttonproductos"> COMPRAR</button>
+                <p class="productoparrafo">$5000</p>
+                <button class="buttonproductos" id="3"> COMPRAR</button>
             </article>
         </section>
     </main>
 
 
     <section>
-                <section class="contenedorflexsection">
+        <section class="contenedorflexsection">
             <article class="contenedorflearticle">
                 <img class="Tazaimagen-Index img-fluid" src="../images/tazainfo1.jpg">
                 <h3 class="Index-h3productos">TAZA INFO 1 </h3>
                 <p class="productoparrafo">$5000</p>
-               <button class="buttonproductos"> COMPRAR</button>
+                <button class="buttonproductos" id="4"> COMPRAR</button>
             </article>
 
             <article class="contenedorflearticle">
                 <img class="Tazaimagen-Index img-fluid" src="../images/tazainfo2.jpg">
                 <h3 class="Index-h3productos">TAZA INFO 2</h3>
-               <p class="productoparrafo">$5000</p>
-             <button class="buttonproductos"> COMPRAR</button>
+                <p class="productoparrafo">$5000</p>
+                <button class="buttonproductos" id="5"> COMPRAR</button>
             </article>
             <article class="contenedorflearticle">
                 <img class="Tazaimagen-Index img-fluid" src="../images/tazainfo3.jpg">
                 <h3 class="Index-h3productos">TAZA INFO 3</h3>
-              <p class="productoparrafo">$5000</p>
-                 <button class="buttonproductos"> COMPRAR</button>
+                <p class="productoparrafo">$5000</p>
+                <button class="buttonproductos" id="6"> COMPRAR</button>
             </article>
         </section>
     </section>
 
     <section>
-                <section class="contenedorflexsection">
+        <section class="contenedorflexsection">
             <article class="contenedorflearticle">
                 <img class="Tazaimagen-Index img-fluid" src="../images/tazainfo4.jpg">
                 <h3 class="Index-h3productos">TAA INFO 4</h3>
-              <p class="productoparrafo">$5000</p>
-                <button class="buttonproductos"> COMPRAR</button>
+                <p class="productoparrafo">$5000</p>
+                <button class="buttonproductos" id="7"> COMPRAR</button>
             </article>
 
             <article class="contenedorflearticle">
                 <img class="Tazaimagen-Index img-fluid" src="../images/tazainfo6.jpg">
                 <h3 class="Index-h3productos">TAZA INFO 6</h3>
-           <p class="productoparrafo">$5000</p>
-                 <button class="buttonproductos"> COMPRAR</button>
+                <p class="productoparrafo">$5000</p>
+                <button class="buttonproductos" id="8"> COMPRAR</button>
             </article>
             <article class="contenedorflearticle">
                 <img class="Tazaimagen-Index img-fluid" src="../images/tazamarvel2.jpg">
                 <h3 class="Index-h3productos">TAZA MARVEL 2</h3>
-            <p class="productoparrafo">$5000</p>
-               <button class="buttonproductos"> COMPRAR</button>
+                <p class="productoparrafo">$5000</p>
+                <button class="buttonproductos" id="9"> COMPRAR</button>
             </article>
         </section>
     </section>
 
     <section>
-                <section class="contenedorflexsection">
+        <section class="contenedorflexsection">
             <article class="contenedorflearticle">
                 <img class="Tazaimagen-Index img-fluid" src="../images/tazamarvel3.jpg">
                 <h3 class="Index-h3productos">TAZA MARVEL 3</h3>
-            <p class="productoparrafo">$5000</p>
-                 <button class="buttonproductos"> COMPRAR</button>
+                <p class="productoparrafo">$5000</p>
+                <button class="buttonproductos" id="10"> COMPRAR</button>
             </article>
 
             <article class="contenedorflearticle">
                 <img class="Tazaimagen-Index img-fluid" src="../images/tazainfo5.jpg">
                 <h3 class="Index-h3productos">TAZA INFO 5L</h3>
-        <p class="productoparrafo">$5000</p>
-              <button class="buttonproductos"> COMPRAR</button>
+                <p class="productoparrafo">$5000</p>
+                <button class="buttonproductos" id="11"> COMPRAR</button>
             </article>
             <article class="contenedorflearticle">
                 <img class="Tazaimagen-Index img-fluid" src="../images/tazamensaje1.jpg">
                 <h3 class="Index-h3productos">TAZA MENSAJE 1</h3>
-            <p class="productoparrafo">$5000</p>
-                 <button class="buttonproductos"> COMPRAR</button>
+                <p class="productoparrafo">$5000</p>
+                <button class="buttonproductos" id="12"> COMPRAR</button>
             </article>
         </section>
     </section>
     <section>
-                <section class="contenedorflexsection">
+        <section class="contenedorflexsection">
             <article class="contenedorflearticle">
                 <img class="Tazaimagen-Index img-fluid" src="../images/tazamensaje10.jpg">
                 <h3 class="Index-h3productos">TAZA MENSAJE 10</h3>
                 <p class="productoparrafo">$5000</p>
-              <button class="buttonproductos"> COMPRAR</button>
+                <button class="buttonproductos" id="13"> COMPRAR</button>
             </article>
 
             <article class="contenedorflearticle">
                 <img class="Tazaimagen-Index img-fluid" src="../images/tazamensaje3.jpg">
                 <h3 class="Index-h3productos">TAZA MENSAJE 3</h3>
-           <p class="productoparrafo">$5000</p>
-                <button class="buttonproductos"> COMPRAR </button>
+                <p class="productoparrafo">$5000</p>
+                <button class="buttonproductos" id="14"> COMPRAR </button>
             </article>
             <article class="contenedorflearticle">
                 <img class="Tazaimagen-Index img-fluid" src="../images/tazamensaje8.jpg">
                 <h3 class="Index-h3productos">TAZA MENSAJE 8</h3>
-         <p class="productoparrafo">$5000</p>
-                <button class="buttonproductos"> COMPRAR</button>
+                <p class="productoparrafo">$5000</p>
+                <button class="buttonproductos" id="15"> COMPRAR</button>
             </article>
         </section>
     </section>
@@ -206,6 +214,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/productos.js"></script>
+    <script src="../js/cartService.js"></script>
 </body>
 
 </html>
