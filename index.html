@@ -22,11 +22,23 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Tazas Locas</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+
+                <div class="d-flex align-items-center order-lg-last">
+                    <a class="nav-link position-relative me-3" href="./pages/carrito.html">
+                        <img src="./images/4305700.png" alt="Carrito" width="30">
+                        <span id="contadorCarrito"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                        </span>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -38,18 +50,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="./pages/nosotros.html">NOSOTROS</a>
                         </li>
-                        <li class="nav-item position-relative">
-                            <a class="nav-link" href="./pages/carrito.html">
-                                <img src="./images/4305700.png" alt="Carrito" width="30">
-                                <span id="contadorCarrito"
-                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                    0
-                                </span>
-                            </a>
-                        </li>
                     </ul>
-                    <form class="d-flex" role="Buscar">
-                        <input class="form-control me-2" type="Buscar" placeholder="Buscar" aria-label="Buscar" />
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" />
                         <button class="btn btn-outline-success" type="submit">Buscar</button>
                     </form>
                 </div>
@@ -59,32 +62,32 @@
             <img src="./images/tema.png" class="img-fluid w-100" alt="Tema">
         </div>
     </header>
+<main>
+    <h2 class="Index-h2">✨DESTACADOS✨</h2>
 
-    <main>
+    <section class="contenedorflexmain">
+        <article class="contenedorflexmainarticle">
+            <img class="Tazaimagen-Index img-fluid" src="./images/tazainfo5.jpg">
+            <h3 class="Index-h3">TAZA DE NEW DAY</h3>
+            <p class="productoparrafo">Taza New Day personalizada</p>
+            <a href="./pages/productos.html" class="button">VER PRODUCTO</a>
+        </article>
 
-        <h2 class="Index-h2">✨DESTACADOS✨</h2>
+        <article class="contenedorflexmainarticle">
+            <img class="Tazaimagen-Index img-fluid" src="./images/tazamarvel1.jpg">
+            <h3 class="Index-h3">TAZA MARVEL</h3>
+            <p class="productoparrafo">Taza Marvel personalizada</p>
+            <a href="./pages/productos.html" class="button">VER PRODUCTO</a>
+        </article>
 
-        <section class="contenedorflexmain">
-            <article class="contenedorflexmainarticle">
-                <img class="Tazaimagen-Index img-fluid" src="./images/tazainfo5.jpg">
-                <h3 class="Index-h3">TAZA DE NEW DAY</h3>
-                <p class="productoparrafo">Taza New Day personalizada</p>
-                <button href="./pages/productos.html" class="button"> VER PRODUCTO</button>
-            </article>
-            <article class="contenedorflexmainarticle">
-                <img class="Tazaimagen-Index img-fluid" src="./images/tazamarvel1.jpg">
-                <h3 class="Index-h3">TAZA MARVEL</h3>
-                <p class="productoparrafo">Taza Marvel personalizada</p>
-                <button href="./pages/productos.html" class="button"> VER PRODUCTO</button>
-            </article>
-            <article class="contenedorflexmainarticle">
-                <img class="Tazaimagen-Index img-fluid" src="./images/tazamensaje8.jpg">
-                <h3 class="Index-h3">TAZA MENSAJE</h3>
-                <p class="productoparrafo">Taza Mensaje personalizada</p>
-                <button href="./pages/productos.html" class="button"> VER PRODUCTO</button>
-            </article>
-        </section>
-    </main>
+        <article class="contenedorflexmainarticle">
+            <img class="Tazaimagen-Index img-fluid" src="./images/tazamensaje8.jpg">
+            <h3 class="Index-h3">TAZA MENSAJE</h3>
+            <p class="productoparrafo">Taza Mensaje personalizada</p>
+            <a href="./pages/productos.html" class="button">VER PRODUCTO</a>
+        </article>
+    </section>
+</main>
 
     <footer class="contenedorfooter bg-dark py-4">
         <div class="container text-center">
@@ -115,6 +118,7 @@
     <script src="./js/productos.js"></script>
     <script src="./js/cartService.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/car.js"></script>
 </body>
 
 </html>

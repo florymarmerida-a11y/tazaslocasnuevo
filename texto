@@ -25,9 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-
-
-
  /**cuenta carrtio  */
 const cuentaCarritoElement = document.getElementById("contadorCarrito");
 function actualizarNumeroCarrito(){
@@ -37,3 +34,18 @@ function actualizarNumeroCarrito(){
         cuentaCarritoElement.innerText = cuenta
 
 }
+
+
+    <div>    
+                <button class="restar">-</button>
+                <span class="cantidad">${taza.cantidad || 1}</span>
+                <button class="sumar">+</button>
+            </div>
+
+            <article class="contenedorflearticle">
+                <h3 class="Index-h3productos">TAZA INFO 5</h3>
+                <p class="productoparrafo">$5000</p>
+                <p class="productoparrafo">0</p>
+                <button class="buttonEliminar" id="1"> Eliminar</button>
+                <p class="productoparrafo" >-----------------</p>
+            </article>

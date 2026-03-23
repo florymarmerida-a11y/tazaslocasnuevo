@@ -1,0 +1,24 @@
+.productosPalCarrito {
+    display: flex;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid rgb(204, 204, 207)
+}
+
+.contenedorflearticle {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.buttonEliminar {
+    background-color: rgb(82, 10, 82);
+    color: aliceblue;
+    width: 16rem;
+    height: 3rem;
+    border: none;
+    padding: 1rem 3rem;
+    border-radius: 0.3rem;
+}

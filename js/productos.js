@@ -2,71 +2,85 @@ const tazas = [
   {
     id: 1,
     nombre: "TAZA INFO 5",
-    precio: 5000
+    precio: 5000,
+    imagen: "../images/tazainfo5.jpg"
   },
   {
     id: 2,
     nombre: "TAZA MARVEL 1",
-    precio: 5000
+    precio: 5000,
+    imagen: "../images/tazamarvel1.jpg"
   },
   {
     id: 3,
     nombre: "TAZA MENSAJE 8",
-    precio: 5000
+    precio: 5000,
+    imagen: "../images/tazamensaje8.jpg"
   },
   {
     id: 4,
     nombre: "TAZA INFO 1",
-    precio: 5000
-  },
+    precio: 5000,
+    imagen: "../images/tazainfo1.jpg"
+  }, 
   {
     id: 5,
     nombre: "TAZA INFO 2",
-    precio: 5000
+    precio: 5000,
+    imagen: "../images/tazainfo2.jpg"
   },
   {
     id: 6,
     nombre: "TAZA INFO 3",
-    precio: 5000
+    precio: 5000,
+    imagen: "../images/tazainfo3.jpg"
   },
   {
     id: 7,
     nombre: "TAZA INFO 6",
-    precio: 5000
+    precio: 5000,
+    imagen: "../images/tazainfo6.jpg"
   },
   {
     id: 8,
     nombre: "TAZA MARVEL 2",
-    precio: 5000
+    precio: 5000,
+    imagen: "../images/tazamarvel2.jpg"
   },
   {
     id: 9,
     nombre: "TAZA MARVEL 3",
-    precio: 5000
+    precio: 5000,
+    imagen: "../images/tazamarvel3.jpg"
   },
   {
     id: 10,
     nombre: "TAZA INFO 5L",
-    precio: 5000
+    precio: 5000,
+    imagen: "../images/tazainfo5.jpg"
   },
   {
     id: 11,
     nombre: "TAZA MENSAJE 1",
-    precio: 5000
+    precio: 5000,
+    imagen: "../images/tazamensaje1.jpg"
   },
   {
     id: 12,
     nombre: "TAZA MENSAJE 10",
-    precio: 5000
+    precio: 5000,
+    imagen: "../images/tazamensaje10.jpg"
   },
   {
     id: 13,
     nombre: "TAZA MENSAJE 3",
-    precio: 5000
+    precio: 5000,
+    imagen: "../images/tazamensaje3.jpg"
   },
   {
     id: 14,
     nombre: "TAZA MENSAJE 8",
-    precio: 5000
+    precio: 5000,
+    imagen: "../images/tazamensaje8.jpg"
   }
 ];
