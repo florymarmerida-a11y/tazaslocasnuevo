@@ -22,20 +22,24 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Tazas Locas</a>
+
                 <div class="d-flex align-items-center order-lg-last">
-                    <a class="nav-link position-relative me-3" href="./carrito.html">
+
+                    <a class="nav-link position-relative me-3" href="../pages/carrito.html">
                         <img src="../images/4305700.png" alt="Carrito" width="30">
                         <span id="contadorCarrito"
                             class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                             0
                         </span>
                     </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                 </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -48,11 +52,12 @@
                             <a class="nav-link" href="./nosotros.html">NOSOTROS</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="Buscar">
-                        <input class="form-control me-2" type="Buscar" placeholder="Buscar" aria-label="Buscar" />
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" />
                         <button class="btn btn-outline-success" type="submit">Buscar</button>
                     </form>
                 </div>
+
             </div>
         </nav>
         <div class="container-fluid p-0">
@@ -61,7 +66,7 @@
     </header>
     <main>
 
-        <h1> CARRITO DE COMPRA</h1>
+        <h1 class="textoCarrito"> CARRITO DE COMPRA</h1>
     </main>
     <main class="productoscarritoflex">
         <section id="listaCarrito" class="productosPalCarrito"></section>
@@ -69,15 +74,15 @@
     <main class="totalesflex">
         <section class="totalesflex" id="totales" hidden="true"></section>
     </main>
-
-    <form id="formCompra" hidden>
-            <h2>Datos Personales</h2>
+ <div class="formContenedor">
+<form class="formularioCarritoFlex" id="formCompra" hidden>
+            <h2 class="datosPersonales">Datos Personales</h2>
             
             <input type="text" placeholder="Nombre" required>
             <input type="email" placeholder="Email" required>
             <input type="text" placeholder="Dirección" required>
 
-            <h2>Datos de Pago</h2>
+            <h2 class="datosPago">Datos de Pago</h2>
 
             <input type="text" placeholder="Número de tarjeta" required>
             <input type="text" placeholder="Fecha de vencimiento" required>
@@ -85,6 +90,8 @@
 
             <button type="submit" class="finalizarcompra" id="btnFinCompra">Finalizar</button>
         </form>
+ </div>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

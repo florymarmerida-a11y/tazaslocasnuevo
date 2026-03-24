@@ -21,6 +21,12 @@ display: flex;
     gap: 10px;
 }
 
+.formularioCarritoFlex{
+   display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px; 
+}
 
 @media (min-width: 600px) {
     .contenedorflexsection {
