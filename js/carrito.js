@@ -1,4 +1,5 @@
-function crearTarjetasProductosCarrito() {
+/*Funcion para obtener los productos previamente ingresados al carrito*/
+function obtenerListaCarrito() {
     const memoria = JSON.parse(localStorage.getItem("tazasLS"));
     const listaCarrito = document.getElementById("listaCarrito");
     if (!memoria) {
@@ -12,24 +13,22 @@ function crearTarjetasProductosCarrito() {
         console.log("si hay productos");
         memoria.forEach((taza) => {
             listaCarrito.innerHTML += `
-            <article class="contenedorflearticle">
+            <article class="contenedorflearticlecarrito">
             <img class="Tazaimagen-Index img-fluid" src="${taza.imagen}">
             <h3 class="Index-h3productos">${taza.nombre}</h3>
-            <p class="productoparrafo">${taza.precio}</p>
-            <p class="productoparrafo" >${taza.cantidad}</p>
+            <p class="productoparrafo"><span>$</span>${taza.precio}</p>
+            <p class="productoparrafo" ><span>Cantidad: </span>${taza.cantidad}</p>
             <button class="buttonEliminar" id="${taza.id}"> Eliminar</button>
             </article>
-
         `;
         });
         actualizarTotales();
     }
 }
 
-crearTarjetasProductosCarrito();
+obtenerListaCarrito();
 
-/* Sumar Totales */
-
+/*Funcion para sumar las cantidades y precio total*/
 function actualizarTotales() {
     const memoria = JSON.parse(localStorage.getItem("tazasLS"));
 
@@ -47,13 +46,12 @@ function actualizarTotales() {
     totales.innerHTML = `
     <p>Total Cantidad <span id="cantidad">${totalCantidad}</span></p>
     <p>Total Precio:$ <span id="precio">${totalPrecio}</span></p>
-    <button class="finalizarcompra" id="finalizocompra"> Finalizar Compra</button>
+    <button class="finalizarcompra" id="finalizocompra">Comprar</button>
     `;
     totales.hidden = false;
 }
 
-/*Eliminar producto del carrito */
-
+/*Funcion para eliminar producto del carrito*/
 function eliminarProducto(id) {
     const memoria = JSON.parse(localStorage.getItem("tazasLS"));
 
@@ -71,49 +69,33 @@ function eliminarProducto(id) {
     location.reload();
 }
 
-/* formulario dinamico - Finalizar compra*/
-document.getElementById("tazasLS").addEventListener("click", function () {
+/*Funcion para simular la finalizacion de la compra*/
+function finalizarCompra() {
+    alert("Compra realizada con éxito 🎉");
+    localStorage.clear();
+    location.reload();
+}
 
-    const memoria = JSON.parse(localStorage.getItem("tazasLS"));
+const botonComprar = document.getElementById("finalizocompra");
+const botonFinCompra = document.getElementById('btnFinCompra');
+const botonesEliminar = document.querySelectorAll('.buttonEliminar');
 
-    // Validar carrito vacío
-    if (!memoria || memoria.length === 0) {
-        alert("El carrito está vacío 🛒");
-        return;
-    }
+if (botonComprar) {
+    botonComprar.addEventListener("click", function () {
+        const formularioCompra = document.getElementById("formCompra");
+        formularioCompra.hidden = false;
+    });
+}
 
-    const contenedor = document.getElementById("contenedorFormulario");
+if (botonFinCompra) {
+    botonFinCompra.addEventListener('click', function () {
+        finalizarCompra();
+    });
+}
 
-    contenedor.innerHTML = `
-        <form id="formCompra">
-            <h2>Datos Personales</h2>
-            
-            <input type="text" placeholder="Nombre" required>
-            <input type="email" placeholder="Email" required>
-            <input type="text" placeholder="Dirección" required>
-
-            <h2>Datos de Pago</h2>
-
-            <input type="text" placeholder="Número de tarjeta" required>
-            <input type="text" placeholder="Fecha de vencimiento" required>
-            <input type="text" placeholder="CVV" required>
-
-            <button type="submit">Finalizar Compra</button>
-        </form>
-    `;
-});
-
-document.addEventListener("submit", function(e) {
-    if (e.target.id === "formCompra") {
-        e.preventDefault();
-
-        alert("Compra realizada con éxito 🎉");
-
-        localStorage.removeItem("tazasLS");
-
-        document.getElementById("contenedorFormulario").innerHTML = "";
-
-        crearTarjetasProductosCarrito();
-        actualizarTotales();
-    }
+botonesEliminar.forEach(boton => {
+    boton.addEventListener('click', function (e) {
+        const idSleccionado = e.currentTarget.id;
+        eliminarProducto(idSleccionado);
+    })
 });

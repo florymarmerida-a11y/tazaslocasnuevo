@@ -50,11 +50,13 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (min-width: 992px) {
   .contenedorflexmain {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 .contenedorflexsection {
   display: grid;
   gap: 25px;
@@ -70,7 +72,7 @@
   text-align: center;
 }
 
-.buttonproductos {
+.botonAddCar {
   background-color: rgb(82, 10, 82);
   color: aliceblue;
   width: 16rem;
@@ -106,11 +108,13 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (min-width: 992px) {
   .contenedorflexsection {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 .contenedorflexsection {
   display: grid;
   grid-template-columns: 1fr;
@@ -162,11 +166,13 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (min-width: 992px) {
   .contenedorflexsection {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 .imagenfooter {
   vertical-align: middle;
   width: 60px;
@@ -205,17 +211,68 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (min-width: 992px) {
   .contenedorflexproductos {
     grid-template-columns: repeat(2, 1fr);
     flex-direction: row;
   }
 }
+
 .temaproductos {
   width: 100%;
   height: auto;
   max-height: 350px;
   object-fit: cover;
+}
+
+
+.buttonEliminar,
+.finalizarcompra {
+  background-color: rgb(82, 10, 82);
+  color: aliceblue;
+  width: 16rem;
+  height: 3rem;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 0.3rem;
+}
+
+.buttonEliminar {
+  background-color: rgb(82, 10, 82);
+  color: aliceblue;
+  width: 16rem;
+  height: 3rem;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 0.3rem;
+}
+
+.contenedorflearticlecarrito {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.totalesflex{
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    align-content: space-between;
+}
+
+@media (min-width: 600px) {
+  .productoscarritoflex {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .productoscarritoflex {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /*# sourceMappingURL=Style.css.map */

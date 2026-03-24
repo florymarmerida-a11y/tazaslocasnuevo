@@ -35,7 +35,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
-  padding: 15px;
+  padding: 50px;
   justify-items: center;
 }
 
@@ -70,7 +70,7 @@
   text-align: center;
 }
 
-.botonAddCar {
+.buttonproductos {
   background-color: rgb(82, 10, 82);
   color: aliceblue;
   width: 16rem;
@@ -117,7 +117,7 @@
   gap: 25px;
   width: 100%;
   padding: 20px;
-  border: 1px solid rgb(67, 50, 191);
+  border: 1px solid rgb(204, 204, 207);
 }
 
 .contenedorflearticle {
@@ -126,7 +126,7 @@
   text-align: center;
 }
 
-.botonAddCar {
+.buttonproductos {
   background-color: rgb(82, 10, 82);
   color: aliceblue;
   width: 16rem;
@@ -185,10 +185,12 @@
   width: 100%;
   grid-template-columns: 1fr;
   padding: 20px;
+  align-items: center;
 }
 
 .textoproductos {
   text-align: center;
+  font-size: 1rem;
 }
 
 .imagennosotros {
@@ -206,6 +208,46 @@
 @media (min-width: 992px) {
   .contenedorflexproductos {
     grid-template-columns: repeat(2, 1fr);
+    flex-direction: row;
   }
 }
-/*# sourceMappingURL=Style.css.map */
+.temaproductos {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: cover;
+}
+
+.productoscarritoflex {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid rgb(204, 204, 207);
+}
+
+.buttonEliminar {
+  background-color: rgb(82, 10, 82);
+  color: aliceblue;
+  width: 16rem;
+  height: 3rem;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 0.3rem;
+}
+
+.indexflex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20rem;
+  margin-top: 1px;
+  margin-bottom: 20px;
+}
+
+.productoscarritoflex {
+  display: flex;
+}
+
+/*# sourceMappingURL=styles.css.map */

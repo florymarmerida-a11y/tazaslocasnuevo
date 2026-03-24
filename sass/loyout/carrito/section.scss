@@ -1,0 +1,36 @@
+.buttonEliminar {
+    background-color: rgb(82, 10, 82);
+    color: aliceblue;
+    width: 16rem;
+    height: 3rem;
+    border: none;
+    padding: 1rem 3rem;
+    border-radius: 0.3rem;
+}
+
+.contenedorflearticlecarrito{
+display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.totalesflex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+@media (min-width: 600px) {
+    .contenedorflexsection {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .contenedorflexsection {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
