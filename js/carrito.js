@@ -74,11 +74,8 @@ function eliminarProducto(id) {
     location.reload();
 }
 
-
-
-/*Funcion para simular la finalizacion de la compra*/
-function finalizarCompra(event) {
-    event.preventDefault();
+/*Funcion para validar los campos del formulario de la compra*/
+function validarFormCompra(event) {
     const formCompraNombre = document.getElementById('formCompraNombre');
     const formCompraEmail = document.getElementById('formCompraEmail');
     const formCompraDireccion = document.getElementById('formCompraDireccion');
@@ -116,7 +113,11 @@ function finalizarCompra(event) {
     if (!datoCVV) {
         return Swal.fire("Error", "CVV inválido, ingrese de nuevo.", "error");
     }
+}
 
+/*Funcion finalizar la compra*/
+function finalizarCompra(event) {
+    event.preventDefault();
     Swal.fire("Compra realizada con éxito 🎉!").then((resultado) => {
         if (resultado.isConfirmed) {
             localStorage.clear();
@@ -125,19 +126,20 @@ function finalizarCompra(event) {
     });
 }
 
-
-
-
-
 const botonComprar = document.getElementById("finalizocompra");
+const botonFinalizar = document.getElementById("btnFinCompra");
 const botonesEliminar = document.querySelectorAll('.buttonEliminar');
-
-
 
 if (botonComprar) {
     botonComprar.addEventListener("click", function () {
         const formularioCompra = document.getElementById("formCompra");
         formularioCompra.hidden = false;
+    });
+}
+
+if (botonFinalizar) {
+    botonFinalizar.addEventListener("click", function (event) {
+        validarFormCompra(event);
     });
 }
 
