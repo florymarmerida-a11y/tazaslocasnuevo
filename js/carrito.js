@@ -54,7 +54,6 @@ function actualizarTotales() {
 /*Funcion para eliminar producto del carrito*/
 function eliminarProducto(id) {
     const memoria = JSON.parse(localStorage.getItem("tazasLS"));
-
     const nuevoArray = memoria.filter(function (taza) {
         return taza.id != id;
     });
@@ -66,30 +65,79 @@ function eliminarProducto(id) {
         localStorage.setItem("tazasLS", JSON.stringify(nuevoArray));
     };
 
+    Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!"
+    });
+
     location.reload();
 }
+
+
 
 /*Funcion para simular la finalizacion de la compra*/
-function finalizarCompra() {
-    alert("Compra realizada con éxito 🎉");
-    localStorage.clear();
-    location.reload();
+function finalizarCompra(event) {
+    event.preventDefault();
+    const formCompraNombre = document.getElementById('formCompraNombre');
+    const formCompraEmail = document.getElementById('formCompraEmail');
+    const formCompraDireccion = document.getElementById('formCompraDireccion');
+    const formCompraTarjeta = document.getElementById('formCompraTarjeta');
+    const formCompraFecha = document.getElementById('formCompraFecha');
+    const formCompraCVV = document.getElementById('formCompraCVV');
+
+    const datoNombre = formCompraNombre.value;
+    const datoEmail = formCompraEmail.value.trim();
+    const datoDireccion = formCompraDireccion.value.trim();
+    const datoTarjeta = formCompraTarjeta.value.trim();
+    const datoFecha = formCompraFecha.value.trim();
+    const datoCVV = formCompraCVV.value.trim();
+
+    if (!datoNombre) {
+        return Swal.fire("Error", "Complete Nombre y Apellido", "error");
+    }
+
+    if (!datoEmail) {
+        return Swal.fire("Error", "Ingrese un email válido", "error");
+    }
+
+    if (!datoDireccion) {
+        return Swal.fire("Error", "Ingrese la dirección", "error");
+    }
+
+    if (!datoTarjeta) {
+        return Swal.fire("Error", "Ingrese el número de tarjeta", "error");
+    }
+
+    if (!datoFecha) {
+        return Swal.fire("Error", "Ingrese la fecha de vencimiento de su tarjeta", "error");
+    }
+
+    if (!datoCVV) {
+        return Swal.fire("Error", "CVV inválido, ingrese de nuevo.", "error");
+    }
+
+    Swal.fire("Compra realizada con éxito 🎉!").then((resultado) => {
+        if (resultado.isConfirmed) {
+            localStorage.clear();
+            location.reload();
+        }
+    });
 }
 
+
+
+
+
 const botonComprar = document.getElementById("finalizocompra");
-const botonFinCompra = document.getElementById('btnFinCompra');
 const botonesEliminar = document.querySelectorAll('.buttonEliminar');
+
+
 
 if (botonComprar) {
     botonComprar.addEventListener("click", function () {
         const formularioCompra = document.getElementById("formCompra");
         formularioCompra.hidden = false;
-    });
-}
-
-if (botonFinCompra) {
-    botonFinCompra.addEventListener('click', function () {
-        finalizarCompra();
     });
 }
 
